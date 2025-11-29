@@ -1,25 +1,21 @@
-# Assignment 2 – Interactive Portfolio Website
+# Assignment 3 – Advanced Portfolio Website
 
-## 📖 Assignment Description
-This project is an enhanced version of my personal portfolio website built for **Assignment 2**.  
-It builds on the foundation of Assignment 1 and introduces **interactive features**, **data handling**, and **AI-assisted improvements**.  
+## 📖 Project Description
+This project is the third stage of my personal portfolio website.  
+It builds on Assignments 1 and 2 by adding **advanced functionality**, such as:
 
-### Key Sections
-- **About Me** → Brief introduction with personalized name greeting.  
-- **Projects** → Dynamic project cards with filters, live search, and collapsible details.  
-- **Contact** → Interactive form with validation and feedback messages.  
+- External API integration (GitHub API)
+- Complex filtering, sorting, and dynamic UI updates
+- Improved state management (saved username, theme, login state)
+- Validation logic and interactive UI components
+- Performance optimization (lazy-loaded images, reduced DOM updates)
+- Enhanced animations and transitions
 
-### Key Enhancements
-- Personalized greeting saved with localStorage.  
-- Fetches random fun facts from a public API.  
-- Dark/light theme with persistent settings.  
-- Animated section reveals and transitions.  
-- Real-time search and category filters for projects.  
-- Inline validation and feedback for the contact form.
+The goal was to create a feature-rich, responsive, and interactive portfolio that demonstrates advanced JavaScript skills and modern web-development practices.
 
 ---
 
 ## 🛠 Setup Instructions
 - **Step 1:** Clone the repository  
   ```bash
-  git clone https://github.com/EyadShahat/assignment-2.git
+  git clone https://github.com/EyadShahat/Assignment-3.git
