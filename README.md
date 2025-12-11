@@ -50,6 +50,8 @@ AI tools were used responsibly for:
 
 ### The demo
 https://drive.google.com/drive/folders/1iLd3d1x474FVtPrbQSffoYWrfKDNxyL9?usp=share_link
+### The deployment url
+https://eyadshahat.github.io/Assign-4/
 
 Full details in:  
 [`docs/ai-usage-report.md`](docs/ai-usage-report.md)
