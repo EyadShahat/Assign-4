@@ -57,4 +57,4 @@ Full details in:
 
 ### **Step 1:** Clone the repository  
 ```bash
-git clone https://github.com/EyadShahat/assignment-4.git
+git clone https://github.com/EyadShahat/Assign-4.git
