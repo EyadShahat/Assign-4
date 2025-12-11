@@ -1,81 +1,76 @@
-# Technical Documentation – Assignment 3
+# Technical Documentation – Assignment 4
 
-## 📌 Project Overview
-This project is an advanced version of my personal portfolio site, originally built in Assignments 1 and 2.  
-Assignment 3 adds **complex JavaScript features**, **API integration**, **state management**, and **performance optimization**.
-
-The result is a feature-rich, responsive portfolio that demonstrates professional-level web development skills.
+## 📌 Overview
+Assignment 4 is the final and polished version of my portfolio web application.  
+It incorporates all previous features (Assignments 1–3) plus new refinements, optimizations, design improvements, and complete documentation.
 
 ---
 
-## 📦 Features Implemented
+## 🧱 System Architecture
 
-### 1. GitHub API Integration
-- Fetches repositories from the GitHub API  
-- Supports:
-  - Sorting (recently updated, stars, alphabetical)
-  - Filtering by programming language
-  - Username input
-  - Loading, empty, and error states
-  - Retry button when API fails  
-- Displays repository cards with stars, language, and update date
+### **Frontend**
+- HTML5 for structure  
+- CSS3 for styling, layout, animations  
+- JavaScript (ES6+) for dynamic features  
 
----
+### **API Layer**
+- GitHub REST API  
+  - Fetches latest repositories  
+  - Supports sorting & filtering  
+  - Includes full error handling and retry logic  
 
-### 2. Complex Logic
-The project uses multi-step logic for advanced functionality:
-
-#### Project Logic
-- Beginner / Advanced filter  
-- Show/Hide project section  
-- Collapsible project details  
-
-#### Repo Logic
-- Search + sort + filter combined  
-- Language dropdown populated dynamically from API response  
-- UI updates without refreshing the page
-
-#### Contact Form
-- Validates:
-  - Name
-  - Email format
-  - Message length  
-- Shows inline errors and success messages  
-- Prevents form submission until all checks pass  
+### **State Management**
+Implemented using `localStorage`:
+- Theme (dark/light)  
+- Username greeting  
+- Login simulation  
+- Project visibility state  
 
 ---
 
-### 3. State Management
-State is stored using `localStorage`:
+## 🌟 Major Features
 
-| Feature | Saved? | Description |
-|--------|--------|-------------|
-| Theme (dark/light) | ✅ | Persists permanently until changed |
-| Username | ✅ | Used in greeting in hero section |
-| Login simulation | ✅ | Toggles “Logged in / Logged out” status |
-| Show/Hide projects | ⚠️ (optional) | Simple UI state toggle |
+### 1. GitHub Repository Integration
+- Fetches repositories dynamically  
+- Displays key repo metadata  
+- Sorting modes:
+  - Recently Updated  
+  - Stars  
+  - Alphabetical  
+- Filters by language  
+- Live search  
+- Loading, error, retry, and empty states  
 
-This ensures the site feels consistent every time the user returns.
+### 2. Projects Section
+- Categorized as *Beginner* or *Advanced*  
+- Collapsible project descriptions  
+- Show/Hide entire section  
+- State preserved across visits  
+
+### 3. Contact Form
+- Inline validation  
+- Custom error messages  
+- Email format validation  
+- Success message animation  
+
+### 4. Performance
+- Lazy-load images  
+- Efficient DOM handling  
+- IntersectionObserver reveals  
+- Reduced repaint/reflow operations  
 
 ---
 
-### 4. Performance Enhancements
-- **Lazy-loaded images** (`loading="lazy"`)  
-- Reduced layout shifts  
-- IntersectionObserver for reveal animations  
-- Organized DOM access for efficiency  
-- Removed unused code from Assignment 2  
-
----
-
-### 5. Animations & Transitions
-- Smooth section reveal on scroll  
-- Collapsible project details animation  
-- Button hover/active transitions  
-- Animated success/error messages  
-
-All animations are lightweight and avoid performance-heavy loops.
-
----
-
-## 🧱 File Structure
+## 📂 File Structure
+```text
+assignment-4/
+├── index.html
+├── css/styles.css
+├── js/script.js
+├── assets/images/
+├── docs/
+│   ├── ai-usage-report.md
+│   └── technical-documentation.md
+└── presentation/
+    ├── slides.pdf
+    └── demo-video.mp4

@@ -1,21 +1,60 @@
-# Assignment 3 – Advanced Portfolio Website
+# Assignment 4 – Personal Web Application (Final Portfolio)
 
-## 📖 Project Description
-This project is the third stage of my personal portfolio website.  
-It builds on Assignments 1 and 2 by adding **advanced functionality**, such as:
+## 📄 Assignment Description
+This project is the final and most polished version of my personal portfolio web application.  
+It builds on Assignments 1, 2, and 3 by adding:
 
-- External API integration (GitHub API)
-- Complex filtering, sorting, and dynamic UI updates
-- Improved state management (saved username, theme, login state)
-- Validation logic and interactive UI components
-- Performance optimization (lazy-loaded images, reduced DOM updates)
-- Enhanced animations and transitions
+- Professional-level design  
+- Fully integrated features  
+- Advanced interactivity  
+- Optimized performance  
+- Clean, maintainable code  
+- A full deployment & presentation  
 
-The goal was to create a feature-rich, responsive, and interactive portfolio that demonstrates advanced JavaScript skills and modern web-development practices.
+The purpose of Assignment 4 is to deliver a **complete personal web application** that showcases everything I learned throughout the course — from HTML, CSS, and JavaScript basics to APIs, state management, interactivity, and AI-assisted development.
+
+---
+
+## ⭐ Key Features
+
+### 🎨 Professional Design
+- Clean UI with consistent styling  
+- Fully responsive for mobile, tablet, and desktop  
+- Polished layout and spacing  
+- Modern animations and transitions  
+
+### 🧠 Advanced Functionality
+- GitHub API integration  
+- Sorting + filtering + searching  
+- Project categorization (Beginner / Advanced)  
+- Hidden/visible section toggles  
+- Collapsible details  
+- Theme persistence (dark/light)  
+- Username greeting persistence  
+- Login simulation  
+- Time-on-site timer  
+
+### ⚡ Performance Enhancements
+- Lazy-loaded project images  
+- Reduced blocking scripts  
+- Efficient DOM updates  
+- Optimized animation handling  
+
+### 🤖 AI Integration
+AI tools were used responsibly for:
+- Debugging  
+- Code review  
+- Documentation  
+- UI/UX suggestions  
+- Optimization ideas  
+
+Full details in:  
+[`docs/ai-usage-report.md`](docs/ai-usage-report.md)
 
 ---
 
 ## 🛠 Setup Instructions
-- **Step 1:** Clone the repository  
-  ```bash
-  git clone https://github.com/EyadShahat/Assignment-3.git
+
+### **Step 1:** Clone the repository  
+```bash
+git clone https://github.com/EyadShahat/assignment-4.git
