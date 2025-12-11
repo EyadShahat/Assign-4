@@ -46,7 +46,10 @@ AI tools were used responsibly for:
 - Code review  
 - Documentation  
 - UI/UX suggestions  
-- Optimization ideas  
+- Optimization ideas
+
+### The demo
+https://drive.google.com/drive/folders/1iLd3d1x474FVtPrbQSffoYWrfKDNxyL9?usp=share_link
 
 Full details in:  
 [`docs/ai-usage-report.md`](docs/ai-usage-report.md)
@@ -58,3 +61,7 @@ Full details in:
 ### **Step 1:** Clone the repository  
 ```bash
 git clone https://github.com/EyadShahat/Assign-4.git
+
+
+
+
