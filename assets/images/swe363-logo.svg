@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 96" role="img" aria-labelledby="title desc">
+  <title id="title">SWE363 Logo</title>
+  <desc id="desc">Black video icon with white play symbol on gray background.</desc>
+  <rect width="128" height="96" fill="#e6e6e6"/>
+  <rect x="26" y="24" width="54" height="40" rx="10" fill="#000"/>
+  <polygon points="48,34 48,54 64,44" fill="#fff"/>
+  <polygon points="84,36 102,28 102,60 84,52" fill="#000"/>
+</svg>

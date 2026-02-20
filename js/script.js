@@ -83,32 +83,16 @@ if (visitorCountEl) {
   visitorCountEl.textContent = visits;
 }
 
-/* ========== Projects: level filter + show/hide + collapsible ========== */
-const levelSelect = document.getElementById('level-select');
+/* ========== Projects: show/hide + collapsible ========== */
 const projectsContainer = document.getElementById('projects-container');
-const projectsEmpty = document.getElementById('projects-empty');
 const toggleProjects = document.getElementById('toggle-projects');
-const projectCards = [...document.querySelectorAll('.project-card')];
-
-function applyProjectLevel() {
-  const level = levelSelect.value;
-  let count = 0;
-  projectCards.forEach(card => {
-    const match = level === 'all' || card.dataset.level === level;
-    card.style.display = match ? '' : 'none';
-    if (match) count++;
+if (projectsContainer && toggleProjects) {
+  toggleProjects.addEventListener('click', () => {
+    const hidden = projectsContainer.style.display === 'none';
+    projectsContainer.style.display = hidden ? '' : 'none';
+    toggleProjects.textContent = hidden ? 'Hide Projects' : 'Show Projects';
   });
-  projectsEmpty.classList.toggle('hidden', count > 0);
 }
-levelSelect.addEventListener('change', applyProjectLevel);
-applyProjectLevel();
-
-toggleProjects.addEventListener('click', () => {
-  const hidden = projectsContainer.style.display === 'none';
-  projectsContainer.style.display = hidden ? '' : 'none';
-  toggleProjects.textContent = hidden ? 'Hide Projects' : 'Show Projects';
-  projectsEmpty.style.display = hidden ? '' : 'none';
-});
 
 document.querySelectorAll('.project-toggle').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -138,7 +122,7 @@ function showRepoSkeletons() {
 }
 
 async function fetchRepos() {
-  const user = (ghInput.value || 'EyadShahat').trim();
+  const user = (ghInput.value || 'lozEyad').trim();
   reposState.textContent = 'Loading…';
   reposEmpty.classList.add('hidden');
   langFilter.innerHTML = '<option value="all">All Languages</option>';

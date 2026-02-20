@@ -14,7 +14,8 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#repos">GitHub</a></li>
+        <li><a href="https://github.com/lozEyad" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/eyad-shahat-6794b8238" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
@@ -55,49 +56,45 @@
     </div>
   </section>
 
-  <!-- Projects: beginner/advanced view + show/hide section -->
+  <!-- Projects -->
   <section id="projects" class="projects reveal">
     <div class="section-header">
       <h2>My <span class="accent">Projects</span></h2>
       <div class="projects-tools">
-        <label class="muted" for="level-select">Level:</label>
-        <select id="level-select">
-          <option value="all">All</option>
-          <option value="beginner">Beginner</option>
-          <option value="advanced">Advanced</option>
-        </select>
-
         <button id="toggle-projects" class="btn-outline small">Hide Projects</button>
       </div>
     </div>
 
     <div id="projects-container" class="projects-container">
-      <!-- Beginner -->
-      <article class="project-card" data-level="beginner">
-        <button class="project-toggle" aria-expanded="false">
-          <h3 class="project-title">Movie Ticket Booking System</h3>
-          <span class="chevron">▾</span>
-        </button>
-        <div class="project-body">
-          <p>Browse movies, select showtimes, and book tickets online. Focus on clean UI & responsiveness.</p>
-          <img loading="lazy" src="assets/images/movie-project.png" alt="Movie Ticket Booking Project"/>
-        </div>
-      </article>
+      <div class="project-group">
+        <h3 class="project-group-title">Main Project</h3>
+        <article class="project-card">
+          <button class="project-toggle" aria-expanded="false">
+            <h4 class="project-title">SWE363 Web Application</h4>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="project-body">
+            <p>A professional course web app with authentication flow, responsive layout, and a clean user experience.</p>
+            <a class="project-link-btn btn-primary" href="https://deployment-ten-pi.vercel.app/#/login" target="_blank" rel="noopener noreferrer">Visit Live Website</a>
+            <img loading="lazy" src="assets/images/swe363-logo.svg" alt="SWE363 Project Logo"/>
+          </div>
+        </article>
+      </div>
 
-      <!-- Advanced -->
-      <article class="project-card" data-level="advanced">
-        <button class="project-toggle" aria-expanded="false">
-          <h3 class="project-title">Parking Website</h3>
-          <span class="chevron">▾</span>
-        </button>
-        <div class="project-body">
-          <p>Search & reserve parking slots, manage reservations, and view availability in real time.</p>
-          <img loading="lazy" src="assets/images/parking-project.png" alt="Parking Website Project"/>
-        </div>
-      </article>
+      <div class="project-group">
+        <h3 class="project-group-title">Additional Projects</h3>
+        <article class="project-card">
+          <button class="project-toggle" aria-expanded="false">
+            <h4 class="project-title">More Projects</h4>
+            <span class="chevron">▾</span>
+          </button>
+          <div class="project-body">
+            <p>My additional projects are available on GitHub. You can view them using the link below.</p>
+            <a class="project-link-btn btn-outline" href="#repos">View GitHub Repositories</a>
+          </div>
+        </article>
+      </div>
     </div>
-
-    <div id="projects-empty" class="empty-state hidden">No projects for this level.</div>
   </section>
 
   <!-- GitHub Repos (API Integration) -->
@@ -105,7 +102,7 @@
     <div class="section-header">
       <h2>Latest <span class="accent">GitHub</span> Repos</h2>
       <div class="repos-tools">
-        <input id="gh-user" class="search" placeholder="GitHub username (default: EyadShahat)"/>
+        <input id="gh-user" class="search" placeholder="GitHub username (default: lozEyad)"/>
         <button id="load-repos" class="btn-outline small">Load</button>
 
         <select id="sort-select" title="Sort">
