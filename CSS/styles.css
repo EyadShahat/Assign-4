@@ -119,6 +119,52 @@ body {
   flex: 1 1 500px;
 }
 
+.hero-visual {
+  flex: 1 1 360px;
+  min-height: 420px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #57a5ff, #0a63e8);
+  opacity: .2;
+}
+
+.hero-orb-lg {
+  width: 330px;
+  height: 330px;
+  right: 8%;
+  top: 12%;
+}
+
+.hero-orb-sm {
+  width: 90px;
+  height: 90px;
+  left: 10%;
+  bottom: 18%;
+}
+
+.hero-photo-shell {
+  width: min(400px, 88%);
+  border-radius: 28px;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(0, 123, 255, .3), rgba(0, 86, 179, .1));
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .2);
+  z-index: 2;
+}
+
+.hero-photo {
+  width: 100%;
+  display: block;
+  border-radius: 22px;
+  object-fit: cover;
+}
+
 .intro {
   color: #777;
   margin-bottom: 10px;
@@ -562,13 +608,152 @@ body.dark .project-link-btn {
   box-shadow: 0 8px 22px rgba(37, 99, 235, .35);
 }
 
+body.dark .hero-orb {
+  background: radial-gradient(circle at 30% 30%, #2f8dff, #0945ab);
+  opacity: .28;
+}
+
+body.dark .hero-photo-shell {
+  background: linear-gradient(135deg, rgba(47, 141, 255, .34), rgba(8, 25, 56, .45));
+  box-shadow: 0 22px 50px rgba(0, 0, 0, .52);
+}
+
 /* =============== Responsive =============== */
 @media (max-width: 900px) {
+  .navbar {
+    padding: 14px 18px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+  }
+
   .hero-container {
     flex-direction: column;
     text-align: center;
+    gap: 24px;
   }
+
+  .hero {
+    padding: 56px 16px;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+  }
+
   .hero-text h1 {
     font-size: 2rem;
+  }
+
+  .projects,
+  .repos,
+  .contact {
+    padding: 56px 16px;
+  }
+
+  .section-header {
+    margin-bottom: 12px;
+  }
+
+  .repos .section-header {
+    gap: 12px;
+  }
+
+  .repos-tools {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .search {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .project-group {
+    padding: 12px;
+  }
+
+  .project-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .nav-links {
+    font-size: .95rem;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+    line-height: 1.35;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .hero-photo-shell {
+    width: min(320px, 94%);
+    padding: 6px;
+    border-radius: 22px;
+  }
+
+  .hero-photo {
+    border-radius: 16px;
+  }
+
+  .desc {
+    font-size: .95rem;
+  }
+
+  .name-preferences {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .name-preferences input,
+  .name-preferences .btn-outline.small,
+  .name-preferences .linklike {
+    width: 100%;
+  }
+
+  .inline-stats {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+    padding-right: 10px;
+  }
+
+  .project-link-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .repos-tools select,
+  .repos-tools .btn-outline.small {
+    width: 100%;
+  }
+
+  .to-top {
+    right: 14px;
+    bottom: 14px;
   }
 }
