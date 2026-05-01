@@ -12,12 +12,12 @@ const themeBtn = document.getElementById('theme-toggle');
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
   document.body.classList.add('dark');
-  themeBtn.textContent = '☀️';
+  themeBtn.textContent = 'Light';
 }
 themeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   const isDark = document.body.classList.contains('dark');
-  themeBtn.textContent = isDark ? '☀️' : '🌙';
+  themeBtn.textContent = isDark ? 'Light' : 'Dark';
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
@@ -53,7 +53,7 @@ const loginStateSpan = document.getElementById('login-state');
 
 function applyLoginState() {
   const loggedIn = localStorage.getItem('loggedIn') === 'true';
-  loginBtn.textContent = loggedIn ? 'Logout' : 'Login';
+  loginBtn.textContent = loggedIn ? 'Log out' : 'Log in';
   loginStateSpan.textContent = `Status: ${loggedIn ? 'Logged in' : 'Logged out'}`;
 }
 applyLoginState();
@@ -87,10 +87,15 @@ if (visitorCountEl) {
 const projectsContainer = document.getElementById('projects-container');
 const toggleProjects = document.getElementById('toggle-projects');
 if (projectsContainer && toggleProjects) {
+  const projectsHidden = localStorage.getItem('projectsHidden') === 'true';
+  projectsContainer.style.display = projectsHidden ? 'none' : '';
+  toggleProjects.textContent = projectsHidden ? 'Show Work' : 'Hide Work';
+
   toggleProjects.addEventListener('click', () => {
     const hidden = projectsContainer.style.display === 'none';
     projectsContainer.style.display = hidden ? '' : 'none';
-    toggleProjects.textContent = hidden ? 'Hide Projects' : 'Show Projects';
+    toggleProjects.textContent = hidden ? 'Hide Work' : 'Show Work';
+    localStorage.setItem('projectsHidden', String(!hidden));
   });
 }
 
@@ -123,7 +128,7 @@ function showRepoSkeletons() {
 
 async function fetchRepos() {
   const user = (ghInput.value || 'lozEyad').trim();
-  reposState.textContent = 'Loading…';
+  reposState.textContent = 'Loading...';
   reposEmpty.classList.add('hidden');
   langFilter.innerHTML = '<option value="all">All Languages</option>';
   try {
@@ -145,7 +150,7 @@ async function fetchRepos() {
     reposState.textContent = `Showing repositories for ${user}`;
   } catch (err) {
     reposList.innerHTML = '';
-    reposState.innerHTML = `Couldn’t load repos. <button id="retry-repos" class="linklike">Retry</button>`;
+    reposState.innerHTML = `Couldn't load repos. <button id="retry-repos" class="linklike">Retry</button>`;
     document.getElementById('retry-repos')?.addEventListener('click', () => {
       showRepoSkeletons();
       fetchRepos();
@@ -183,7 +188,7 @@ function renderRepos() {
     card.innerHTML = `
       <h4><a href="${r.html_url}" target="_blank" rel="noopener">${r.name}</a></h4>
       <div class="repo-meta">
-        <span>★ ${r.stargazers_count}</span>
+        <span>Stars: ${r.stargazers_count}</span>
         <span>${r.language}</span>
         <span>Updated: ${new Date(r.updated_at).toLocaleDateString()}</span>
       </div>`;
@@ -237,9 +242,9 @@ form.addEventListener('submit', e => {
     return;
   }
 
-  formStatus.textContent = 'Sending…';
+  formStatus.textContent = 'Sending...';
   setTimeout(() => {
-    formStatus.textContent = '✅ Message sent (demo). Thanks!';
+    formStatus.textContent = 'Message sent (demo). Thanks!';
     form.reset();
   }, 700);
 });
@@ -261,7 +266,7 @@ const toTopBtn = document.getElementById('to-top');
 
 window.addEventListener('scroll', () => {
   if (!toTopBtn) return;
-  toTopBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+  toTopBtn.style.display = window.scrollY > 400 ? 'grid' : 'none';
 });
 
 toTopBtn?.addEventListener('click', () => {

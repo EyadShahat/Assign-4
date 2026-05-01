@@ -2,161 +2,214 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eyad Shahat | Portfolio</title>
-  <link rel="stylesheet" href="CSS/styles.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Eyad Shahat portfolio showcasing web development, GitHub projects, and contact information."
+  />
+  <title>Eyad Shahat | Web Developer Portfolio</title>
+  <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Eyad<span>Shahat</span></div>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="#about" aria-label="Eyad Shahat home">
+        <span class="logo-mark">ES</span>
+        <span class="logo-text">Eyad Shahat</span>
+      </a>
+
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="https://github.com/lozEyad" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/eyad-shahat-6794b8238" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#repos">Repos</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
       <div class="nav-actions">
-        <button id="login-toggle" class="btn-outline">Login</button>
-        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+        <a class="nav-link-button" href="assets/files/Eyad_Shahat_Cv.pdf" download>CV</a>
+        <button id="login-toggle" class="btn-outline" type="button">Log in</button>
+        <button id="theme-toggle" class="theme-btn" type="button" aria-label="Toggle theme">Dark</button>
       </div>
     </nav>
   </header>
 
-  <!-- Hero / About -->
-  <section id="about" class="hero reveal">
-    <div class="hero-container">
-      <div class="hero-text">
-        <p class="intro">Hey, <span id="greet-name">there</span> 👋</p>
-        <h1>I create <span class="accent">web solutions</span> and modern digital experiences</h1>
-        <p class="desc">
-          I’m a motivated computer science student passionate about web development and AI integration.
-          I enjoy building interactive, responsive, and accessible experiences.
-        </p>
+  <main>
+    <section id="about" class="hero reveal">
+      <div class="hero-container">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio / Computer Science</p>
+          <p class="intro">Hello, <span id="greet-name">there</span>.</p>
+          <h1>Building clean web interfaces with practical JavaScript and API-driven features.</h1>
+          <p class="desc">
+            I am Eyad Shahat, a computer science student focused on responsive web applications,
+            polished user experiences, and a growing interest in AI.
+          </p>
 
-        <!-- Preferences -->
-        <div class="name-preferences">
-          <input id="name-input" type="text" placeholder="Enter your name (optional)" />
-          <button id="save-name" class="btn-outline small">Save</button>
-          <button id="clear-name" class="linklike">Clear</button>
-          <span id="name-feedback" class="muted"></span>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a href="#projects" class="btn-primary">View Work</a>
+            <a href="assets/files/Eyad_Shahat_Cv.pdf" class="btn-secondary" download>Download CV</a>
+          </div>
+
+          <div class="preference-panel" aria-label="Visitor preferences">
+            <div class="name-preferences">
+              <label class="sr-only" for="name-input">Visitor name</label>
+              <input id="name-input" type="text" placeholder="Enter your name" />
+              <button id="save-name" class="btn-outline small" type="button">Save</button>
+              <button id="clear-name" class="linklike" type="button">Clear</button>
+              <span id="name-feedback" class="muted" aria-live="polite"></span>
+            </div>
+
+            <div class="inline-stats muted" aria-label="Local visitor data">
+              <span>Session <strong id="timer">00:00</strong></span>
+              <span id="login-state">Status: Logged out</span>
+              <span>Visits <strong id="visitor-count"></strong></span>
+            </div>
+          </div>
         </div>
 
-        <div class="inline-stats muted">
-          <span>Time on site: <strong id="timer">00:00</strong></span>
-          <span id="login-state">Status: Logged out</span>
-        </div>
-
-        <p class="muted">Visitor count: <span id="visitor-count"></span></p>
-
-        <a href="#contact" class="btn-primary">Get In Touch</a>
-      </div>
-
-      <div class="hero-visual">
-        <span class="hero-orb hero-orb-lg"></span>
-        <span class="hero-orb hero-orb-sm"></span>
-        <div class="hero-photo-shell">
-          <img class="hero-photo" src="assets/images/eyad-profile.png" alt="Eyad Shahat portrait"/>
+        <div class="hero-visual" aria-label="Eyad Shahat profile preview">
+          <div class="portrait-frame">
+            <img class="hero-photo" src="assets/images/eyad-profile.png" alt="Eyad Shahat portrait" />
+          </div>
+          <div class="profile-summary">
+            <span class="summary-label">Current Focus</span>
+            <strong>Front-end systems, APIs, and AI</strong>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects" class="projects reveal">
-    <div class="section-header">
-      <h2>My <span class="accent">Projects</span></h2>
-      <div class="projects-tools">
-        <button id="toggle-projects" class="btn-outline small">Hide Projects</button>
+      <div class="skill-strip" aria-label="Core strengths">
+        <span>Responsive UI</span>
+        <span>JavaScript</span>
+        <span>GitHub API</span>
+        <span>Form Validation</span>
+        <span>AI</span>
       </div>
-    </div>
+    </section>
 
-    <div id="projects-container" class="projects-container">
-      <div class="project-group">
-        <h3 class="project-group-title">Main Project</h3>
-        <article class="project-card">
-          <button class="project-toggle" aria-expanded="false">
-            <h4 class="project-title">SWE363 Web Application</h4>
-            <span class="chevron">▾</span>
+    <section id="projects" class="projects reveal">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects with real interface details.</h2>
+        </div>
+        <div class="projects-tools">
+          <button id="toggle-projects" class="btn-outline small" type="button">Hide Work</button>
+        </div>
+      </div>
+
+      <div id="projects-container" class="projects-container">
+        <article class="project-card featured">
+          <button class="project-toggle" type="button" aria-expanded="true">
+            <span>
+              <span class="project-kicker">Course Web App</span>
+              <span class="project-title">SWE363 Web Application</span>
+            </span>
+            <span class="chevron" aria-hidden="true">v</span>
           </button>
           <div class="project-body">
-            <p>A professional course web app with authentication flow, responsive layout, and a clean user experience.</p>
-            <a class="project-link-btn btn-primary" href="https://deployment-ten-pi.vercel.app/#/login" target="_blank" rel="noopener noreferrer">Visit Live Website</a>
-            <img loading="lazy" src="assets/images/swe363-logo.svg" alt="SWE363 Project Logo"/>
+            <p>
+              A responsive web application with authentication flow, clean navigation,
+              and a deployment-ready user experience.
+            </p>
+            <div class="project-meta" aria-label="Project highlights">
+              <span>Authentication</span>
+              <span>Responsive Layout</span>
+              <span>Deployment</span>
+            </div>
+            <div class="project-actions">
+              <a class="project-link-btn btn-primary" href="https://deployment-ten-pi.vercel.app/#/login" target="_blank" rel="noopener noreferrer">Visit Live Site</a>
+              <a class="project-link-btn btn-secondary" href="#repos">View Code Repos</a>
+            </div>
+            <div class="project-preview logo-preview">
+              <img loading="lazy" src="assets/images/swe363-logo.svg" alt="SWE363 project logo" />
+            </div>
           </div>
         </article>
+
+      </div>
+    </section>
+
+    <section id="repos" class="repos reveal">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Live GitHub Feed</p>
+          <h2>Repository explorer.</h2>
+        </div>
       </div>
 
-      <div class="project-group">
-        <h3 class="project-group-title">Additional Projects</h3>
-        <article class="project-card">
-          <button class="project-toggle" aria-expanded="false">
-            <h4 class="project-title">More Projects</h4>
-            <span class="chevron">▾</span>
-          </button>
-          <div class="project-body">
-            <p>My additional projects are available on GitHub. You can view them using the link below.</p>
-            <a class="project-link-btn btn-outline" href="#repos">View GitHub Repositories</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+      <div class="repo-toolbar" aria-label="GitHub repository controls">
+        <label class="sr-only" for="gh-user">GitHub username</label>
+        <input id="gh-user" class="search" placeholder="GitHub username (default: lozEyad)" />
+        <button id="load-repos" class="btn-primary small" type="button">Load</button>
 
-  <!-- GitHub Repos (API Integration) -->
-  <section id="repos" class="repos reveal">
-    <div class="section-header">
-      <h2>Latest <span class="accent">GitHub</span> Repos</h2>
-      <div class="repos-tools">
-        <input id="gh-user" class="search" placeholder="GitHub username (default: lozEyad)"/>
-        <button id="load-repos" class="btn-outline small">Load</button>
-
+        <label class="sr-only" for="sort-select">Sort repositories</label>
         <select id="sort-select" title="Sort">
-          <option value="updated">Sort: Recently Updated</option>
-          <option value="stars">Sort: Stars</option>
-          <option value="name">Sort: Name</option>
+          <option value="updated">Recently Updated</option>
+          <option value="stars">Most Stars</option>
+          <option value="name">Name</option>
         </select>
 
+        <label class="sr-only" for="lang-filter">Filter by language</label>
         <select id="lang-filter" title="Language Filter">
           <option value="all">All Languages</option>
         </select>
       </div>
-    </div>
 
-    <div id="repos-state" class="muted">Click “Load” to fetch repositories.</div>
-    <div id="repos-list" class="repos-list"></div>
-    <div id="repos-empty" class="empty-state hidden">No repositories found.</div>
-  </section>
+      <div id="repos-state" class="muted">Click Load to fetch repositories.</div>
+      <div id="repos-list" class="repos-list"></div>
+      <div id="repos-empty" class="empty-state hidden">No repositories found.</div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact reveal">
-    <h2>Contact Me</h2>
-    <form id="contact-form" novalidate>
-      <div class="field">
-        <input id="name" type="text" placeholder="Your Name" required/>
-        <small class="error" id="name-error"></small>
+    <section id="contact" class="contact reveal">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build something useful.</h2>
+        </div>
       </div>
-      <div class="field">
-        <input id="email" type="email" placeholder="Your Email" required/>
-        <small class="error" id="email-error"></small>
+
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <p>
+            Send a message for project collaboration, internship opportunities, or feedback
+            on this portfolio.
+          </p>
+          <div class="contact-links" aria-label="Direct contact links">
+            <a href="mailto:e.k.shahat@gmail.com">e.k.shahat@gmail.com</a>
+            <a href="https://github.com/lozEyad" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/eyad-shahat-6794b8238" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" required />
+            <small class="error" id="name-error"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" required />
+            <small class="error" id="email-error"></small>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Write your message" required></textarea>
+            <small class="error" id="message-error"></small>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+          <div id="form-status" class="muted" aria-live="polite"></div>
+        </form>
       </div>
-      <div class="field">
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <small class="error" id="message-error"></small>
-      </div>
-      <button type="submit" class="btn-primary">Send</button>
-      <div id="form-status" class="muted"></div>
-    </form>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <p>© <span id="year"></span> Eyad Shahat. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Eyad Shahat.</p>
   </footer>
 
-  <!-- Scroll To Top Button -->
-  <button id="to-top" class="to-top" aria-label="Scroll to top">↑</button>
+  <button id="to-top" class="to-top" type="button" aria-label="Scroll to top">^</button>
 
   <script src="js/script.js" defer></script>
 </body>
